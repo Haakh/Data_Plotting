@@ -1,3 +1,5 @@
+## The File downloaded is extracted first, and then name changed to c.txt for ease
+#It's read as a csv file for easy conversion.
 consume <- read.csv("household_power_consumption.csv", sep=";", na.strings="?")
 consume <- subset(consume, Date == "1/2/2007" | Date == "2/2/2007")
 time <- strptime(paste(consume$Date, consume$Time), format="%d/%m/%Y %H:%M:%S")
